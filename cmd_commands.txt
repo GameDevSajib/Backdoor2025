@@ -30,3 +30,4 @@
 21:  netstat
 22:  route print
 23:  title BU
+24:  slmgr -dli
