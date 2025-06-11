@@ -35,11 +35,24 @@
 26:  vol D:
 27:  charmap
 28:  start www.google.com (open browser)
-29: firewall.cpl
-30: desk.cpl
-31: msinfo32
-32: start msedge www.youtube.com
-33. attrib +h +s +r (To hide All file in a folder/directory)
-34. attrib -h -s -r(Re-back All files) 
-35: net user 
-
+29:  firewall.cpl
+30:  desk.cpl
+31:  msinfo32
+32:  start msedge www.youtube.com
+33.  attrib +h +s +r (To hide All file in a folder/directory)
+34.  attrib -h -s -r(Re-back All files) 
+35:  net user 
+36:  dxdiag
+37:  vol
+38:  set
+39:  wmic os get version
+40:  wmic os list brief
+41:  wmic diskdrive get model,name,size
+42:  wmic logicaldisk get name,size
+43:  wmic useraccount list (Last kbe Os Dewa hoise) 
+44:  wmic product get name ( pc te ki ki softwer install ace)
+45:  wmic cpu get name
+46:  wmic cpu (Processor Archetecture)
+47:  wmic cpu get numberofcores (Processor a koita core ace) 
+48:  wmic computersystem get totalphysicalmemory( Ram koto) 
+49:  wmic csproduct get name, identifyingnumber (laptop/Pc sevicing or warrenty te ei number lage)
