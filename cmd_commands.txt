@@ -14,3 +14,4 @@
 7. systeminfo
 8. systeminfo |find "OS"
 9. arp -a
+10. tasklist/svc
