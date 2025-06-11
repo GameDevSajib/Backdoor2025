@@ -8,4 +8,5 @@
 
 5.netsh wlan show profile name="rubixcube" key=clear
 
-6 wmic cpu get name
+6. wmic cpu get name
+7. systeminfo
