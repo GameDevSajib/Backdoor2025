@@ -17,5 +17,6 @@
 10. tasklist/svc
 
 ///funny 
+10.1 color a
 11: curl ascii.live/forrest 
-curl ascii.live/rick
+12: curl ascii.live/rick
