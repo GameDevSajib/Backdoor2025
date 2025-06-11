@@ -24,3 +24,4 @@
 14: shutdown -i (Multiple Computers will be Shutdown.From Net View command collect the computers name )
 15:  control Admintools
 16: dism /online /cleanup-image /restorehealth
+17: tracert google.com
