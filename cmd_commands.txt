@@ -56,3 +56,6 @@
 47:  wmic cpu get numberofcores (Processor a koita core ace) 
 48:  wmic computersystem get totalphysicalmemory( Ram koto) 
 49:  wmic csproduct get name, identifyingnumber (laptop/Pc sevicing or warrenty te ei number lage)
+50:  tracert google.com
+51:  nbtstat -a 192.168.0.103
+52:  netsh interface ipv4 show interface
