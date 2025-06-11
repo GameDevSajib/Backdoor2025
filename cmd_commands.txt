@@ -25,3 +25,4 @@
 15:  control Admintools
 16: dism /online /cleanup-image /restorehealth
 17: tracert google.com
+18: getmac
