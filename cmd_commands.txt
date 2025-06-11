@@ -28,3 +28,4 @@
 18: getmac
 20: nslookup google.com
 21:  netstat
+22:  route print
