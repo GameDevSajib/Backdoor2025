@@ -21,4 +21,4 @@
 11: curl ascii.live/forrest 
 12: curl ascii.live/rick
 13: Net View
-14: shutdown -i
+14: shutdown -i (Multiple Computers will be Shutdown.From Net View command collect the computers name )
