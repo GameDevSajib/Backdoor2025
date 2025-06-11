@@ -4,4 +4,7 @@
 
 3.start microsoft.windows.camera:
 
-4.netsh wlan show profile name="rubixcube" key=clear
+4.netsh wlan show profiles
+
+5.netsh wlan show profile name="rubixcube" key=clear
+
