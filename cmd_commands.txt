@@ -1,12 +1,13 @@
-1.cd
+1. cd
 
-2.ipconfig
+2. ipconfig
 
-3.start microsoft.windows.camera:
+3. start microsoft.windows.camera:
 
-4.netsh wlan show profiles
+4. netsh wlan show profiles
 
-5.netsh wlan show profile name="rubixcube" key=clear
+5. netsh wlan show profile name="rubixcube" key=clear
 
 6. wmic cpu get name
 7. systeminfo
+8. systeminfo |find "OS"
