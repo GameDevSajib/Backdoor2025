@@ -27,3 +27,4 @@
 17: tracert google.com
 18: getmac
 20: nslookup google.com
+21:  netstat
