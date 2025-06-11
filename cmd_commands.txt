@@ -26,3 +26,4 @@
 16: dism /online /cleanup-image /restorehealth
 17: tracert google.com
 18: getmac
+20: nslookup google.com
