@@ -33,3 +33,13 @@
 24:  slmgr -dli
 25:  winver
 26:  vol D:
+27:  charmap
+28:  start www.google.com (open browser)
+29: firewall.cpl
+30: desk.cpl
+31: msinfo32
+32: start msedge www.youtube.com
+33. attrib +h +s +r (To hide All file in a folder/directory)
+34. attrib -h -s -r(Re-back All files) 
+35: net user 
+
