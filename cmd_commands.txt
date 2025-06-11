@@ -11,3 +11,4 @@
 6. wmic cpu get name
 7. systeminfo
 8. systeminfo |find "OS"
+9. arp -a
