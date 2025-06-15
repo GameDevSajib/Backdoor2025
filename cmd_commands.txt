@@ -59,7 +59,7 @@
 50:  tracert google.com
 51:  nbtstat -a 192.168.0.103
 52:  netsh interface ipv4 show interface
-
+     ////////finding your real ip 
 53:  nslookup myip.opendns.com resolver1.opendns.com (fINDING MY REAL IP)
 54:  nslookup myip.opendns.com resolver1.opendns.com | findstr "Address"
 55:  curl ifconfig.me
