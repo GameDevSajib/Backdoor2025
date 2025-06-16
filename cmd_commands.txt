@@ -63,3 +63,4 @@
 53:  nslookup myip.opendns.com resolver1.opendns.com (fINDING MY REAL IP)
 54:  nslookup myip.opendns.com resolver1.opendns.com | findstr "Address"
 55:  curl ifconfig.me
+56:  systeminfo | findstr /B /C:"OS Name"
