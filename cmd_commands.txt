@@ -68,3 +68,4 @@
 58:  netsh advfirewall firewall add rule name="Allow TCP 8080" dir=in action=allow protocol=TCP localport=8080
 59:  winget install Insecure.Nmap
 60:  netsh interface ipv4 show addresses
+61:  winget install --id Microsoft.PowerShell --source winget (intalling powershell)
