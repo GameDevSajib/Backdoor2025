@@ -76,6 +76,7 @@
 63.1:  choco --version
 64: setx PATH "%PATH%;C:\ProgramData\chocolatey\bin"
 
+65: Start-Process "C:\Users\Arobi Sultana\Downloads\abcd.exe" -ArgumentList "/S /quiet /norestart" -Verb runas -Wait ( Install .exe in powershell )
 
 
 
