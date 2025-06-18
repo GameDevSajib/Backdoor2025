@@ -65,3 +65,4 @@
 55:  curl ifconfig.me
 56:  systeminfo | findstr /B /C:"OS Name"
 57:  netsh advfirewall firewall add rule name="Allow Outbound 8080" dir=out action=allow protocol=TCP localport=8080
+58:  winget install Insecure.Nmap
