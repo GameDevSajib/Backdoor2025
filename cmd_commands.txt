@@ -79,5 +79,5 @@
 65: Start-Process "C:\Users\Arobi Sultana\Downloads\abcd.exe" -ArgumentList "/S /quiet /norestart" -Verb runas -Wait ( Install .exe in powershell )
 66: start msedge gmail.com
 67: start msedge "https://www.youtube.com/results?search_query=eluveitie+isara"
-
+68: start msedge --inprivate "https://www.youtube.com/watch?v=Hd1xjTQ8puk&autoplay=1"
 
