@@ -82,4 +82,7 @@
 68: start msedge --inprivate "https://www.youtube.com/watch?v=Hd1xjTQ8puk&autoplay=1"
 
 69: @echo off
+    netsh wlan show profile name="BU-Students" key=clear | findstr /R /C:"Key Content"
+    pause
+
 
