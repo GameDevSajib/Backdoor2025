@@ -81,3 +81,5 @@
 67: start msedge "https://www.youtube.com/results?search_query=eluveitie+isara"
 68: start msedge --inprivate "https://www.youtube.com/watch?v=Hd1xjTQ8puk&autoplay=1"
 
+69: @echo off
+
