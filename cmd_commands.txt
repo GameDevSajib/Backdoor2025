@@ -85,4 +85,7 @@
     netsh wlan show profile name="BU-Students" key=clear | findstr /R /C:"Key Content"
     pause
 
-
+70:@echo off
+powershell -command "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; $bmp = New-Object Drawing.Bitmap ([System.Windows.Forms.SystemInformation]::VirtualScreen.Width), ([System.Windows.Forms.SystemInformation]::VirtualScreen.Height); $graphics = [Drawing.Graphics]::FromImage($bmp); $graphics.CopyFromScreen([System.Windows.Forms.SystemInformation]::VirtualScreen.Location, [System.Drawing.Point]::Empty, $bmp.Size); $bmp.Save('C:\\Users\\%USERNAME%\\Desktop\\full_screenshot.png'); $graphics.Dispose(); $bmp.Dispose()"
+echo Screenshot saved to Desktop as full_screenshot.png
+pause
