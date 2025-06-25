@@ -93,3 +93,4 @@ pause
 ///access C drive 
 cd C:\ && dir
 cd C:\Users\%USERNAME%\Desktop && dir
+cd C:\Users\%USERNAME%\Desktop && start Wifi_BasedSurvelliance_Drone.pdf
