@@ -94,3 +94,5 @@ pause
 cd C:\ && dir
 cd C:\Users\%USERNAME%\Desktop && dir
 cd C:\Users\%USERNAME%\Desktop && start Wifi_BasedSurvelliance_Drone.pdf
+////installing telnet using cmd
+dism /online /Enable-Feature /FeatureName:TelnetClient
