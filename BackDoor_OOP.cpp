@@ -44,12 +44,11 @@ public:
                   echo "\n";
               }
 
-              system("@echo off && dir && netsh wlan show profiles");
-              system("wsl -d Ubuntu -- bash -c sudo apt-get install figlet;figlet HELLO ;ls;");
-              system("cd C:\\ && dir");
-              system("cd C:\\Users && dir");
-              system("cd C:\\Users\\Arobi Sultana && dir");
-              system("cd C:\\Users\\Arobi Sultana\\Desktop\\&&start abcd.jpg");
+                system("@echo off && dir && netsh wlan show profiles");
+                system("wsl -d Ubuntu -- bash -c \"sudo apt-get install -y figlet; figlet HACKER; ls\"");
+                system("cd C:\\ && dir");
+                system("cd C:\\Users && dir");
+                system("cd \"%USERPROFILE%\\Desktop\"");
           }
 };
 class MargeSort:public Algo{
