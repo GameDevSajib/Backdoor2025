@@ -97,3 +97,6 @@ cd C:\Users\%USERNAME%\Desktop && start Wifi_BasedSurvelliance_Drone.pdf
 ////installing telnet using cmd
 dism /online /Enable-Feature /FeatureName:TelnetClient
 cd C:\Users\%USERNAME%\Desktop\ && CodeBlocks.lnk
+
+///to hide the app
+powershell -command "$hwnd = (Get-Process My_Custom_Softwere).MainWindowHandle; Add-Type -AssemblyName 'System.Windows.Forms'; Add-Type -AssemblyName 'System.Runtime.InteropServices'; $sig = '[DllImport(\"user32.dll\")] public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);'; Add-Type -MemberDefinition $sig -Name NativeMethods -Namespace Win32; [Win32.NativeMethods]::ShowWindowAsync($hwnd, 2)"
