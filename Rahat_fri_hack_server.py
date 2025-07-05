@@ -1,7 +1,7 @@
 
 ####  ei command dwaw....shell a ...> cmd /c systeminfo
 ####   cmd /c "netsh wlan show profiles"
-
+####  otba shell koiakber enter chapleo aksomy asbe!!!!! 
 import socket
 import subprocess
 
