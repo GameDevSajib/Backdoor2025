@@ -113,3 +113,15 @@ timedate.cpl
 control mouse
 control keyboard
 
+////funny !!!!!!!!!!!!!
+start msedge "https://zoomquilt.org"  
+start msedge "https://www.patatap.com" 
+start msedge "https://mondrian.io"     
+start msedge "https://thedeepestsite.com"  
+start msedge "https://www.pointerpointer.com"  
+start msedge "https://heeeeeeeey.com/"  
+start msedge "https://endless.horse/"  
+start msedge "https://longdogechallenge.com/"  
+start msedge "https://ncase.me/trust/" 
+start msedge "https://www.staggeringbeauty.com/"  
+start msedge "https://clickclickclick.click/" 
