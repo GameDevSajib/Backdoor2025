@@ -142,3 +142,7 @@ start msedge "https://pointerpointer.com"
 start msedge "https://www.trypap.com"             
 start msedge "https://ninjaflex.com/"               
 start msedge "https://www.rrrather.com/"           
+
+
+/////Can You Recover RAM Data via CMD
+wmic process get Name,ProcessId,WorkingSetSize
