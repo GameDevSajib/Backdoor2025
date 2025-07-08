@@ -147,5 +147,9 @@ start msedge "https://www.rrrather.com/"
 /////Can You Recover RAM Data via CMD
 wmic process get Name,ProcessId,WorkingSetSize
 
+//cat command altranative is type in cmd 
+type keylog.txt
+
+
 ///get mac address 
 getmac
