@@ -153,3 +153,6 @@ type keylog.txt
 
 ///get mac address 
 getmac
+
+///checking graphics card
+wmic path win32_videocontroller get name
