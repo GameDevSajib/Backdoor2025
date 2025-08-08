@@ -160,3 +160,5 @@ wmic path win32_videocontroller get name
 //audio device
 wmic path win32_videocontroller get name
 
+///which folder it contains:
+fsutil fsinfo drives
