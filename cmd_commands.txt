@@ -164,3 +164,6 @@ wmic path win32_videocontroller get name
 fsutil fsinfo drives
 dir C: 
 
+///computer forensics
+C:\Windows\inf\setupapi.dev.log
+
