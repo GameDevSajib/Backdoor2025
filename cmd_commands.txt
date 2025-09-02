@@ -172,3 +172,6 @@ C:\Windows\inf\setupapi.dev.log
 certutil -encode image.jpg image.txt
 certutil -decode image.txt image.jpg
 
+///powershell commands
+powershell -Command "Get-ChildItem \"C:\\\""
+
