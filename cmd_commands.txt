@@ -167,3 +167,8 @@ dir C:
 ///computer forensics
 C:\Windows\inf\setupapi.dev.log
 
+///image file encyption and decryption
+
+certutil -encode image.jpg image.txt
+certutil -decode image.txt image.jpg
+
