@@ -174,4 +174,5 @@ certutil -decode image.txt image.jpg
 
 ///powershell commands
 powershell -Command "Get-ChildItem \"C:\\\""
-
+powershell -Command "Get-ChildItem \"C:\\Users\\$env:USERNAME\\Downloads\""
+powershell -Command "Get-ChildItem \"C:\\Users\\$env:USERNAME\\Desktop\""
