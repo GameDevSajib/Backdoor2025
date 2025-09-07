@@ -1,0 +1,16 @@
+
+
+1.first build a exe setup in inno setup and download windows sdk . 
+2.copy the signtool.exe from this path to my folder whaere i want to work
+C:\Program Files (x86)\Windows Kits\10\App Certification Kit(ei folder a signtool ase)
+
+$cert = New-SelfSignedCertificate -Subject "mysetup" -CertStoreLocation "cert:\CurrentUser\My" -HashAlgorithm sha256 -Type CodeSigning
+$pwd = ConvertTo-SecureString -String "12345" -Force -AsPlainText
+Export-PfxCertificate -Cert $cert -FilePath "mysetup.pfx" -Password $pwd
+
+///(the fist three commnad will be executed in powershell .Here mysetup.exe and signtool.exe will be the same folder )
+
+signtool sign /f mysetup.pfx /p 12345 /fd SHA256 /tr http://timestamp.digicert.com /td SHA256 mysetup.exe
+signtool.exe timestamp -t http://timestamp.digicert.com mysetup.exe 
+
+///(last two commands will be executed in cmd .Here mysetup.exe and signtool.exe will be the same folder )
