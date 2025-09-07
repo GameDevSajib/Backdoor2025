@@ -13,4 +13,7 @@ Export-PfxCertificate -Cert $cert -FilePath "mysetup.pfx" -Password $pwd
 signtool sign /f mysetup.pfx /p 12345 /fd SHA256 /tr http://timestamp.digicert.com /td SHA256 mysetup.exe
 signtool.exe timestamp -t http://timestamp.digicert.com mysetup.exe 
 
+
 ///(last two commands will be executed in cmd .Here mysetup.exe and signtool.exe will be the same folder )
+
+signtool verify /pa mysetup.exe
