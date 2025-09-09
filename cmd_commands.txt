@@ -65,27 +65,28 @@
 55:  curl ifconfig.me
 56:  systeminfo | findstr /B /C:"OS Name"
 57:  netsh advfirewall firewall add rule name="Allow Outbound 8080" dir=out action=allow protocol=TCP localport=8080
-58:  netsh advfirewall firewall add rule name="Allow TCP 8080" dir=in action=allow protocol=TCP localport=8080
-59:  winget install Insecure.Nmap
-60:  netsh interface ipv4 show addresses
-61:  winget install --id Microsoft.PowerShell --source winget (intalling powershell)
-62:  winget install --id 9MZ1SNWT0N5D --source msstore
+  netsh advfirewall firewall add rule name="Allow TCP 8080" dir=in action=allow protocol=TCP localport=8080
+  winget install Insecure.Nmap
+  netsh interface ipv4 show addresses
+  winget install --id Microsoft.PowerShell --source winget (intalling powershell)
+  winget install --id 9MZ1SNWT0N5D --source msstore
 ////installing choco using cmd (choco is kind of apt-get /sudo pacman ....kind of pakage manager ) 
-63:  Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+  Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-63.1:  choco --version
-64: setx PATH "%PATH%;C:\ProgramData\chocolatey\bin"
+  choco --version
+ setx PATH "%PATH%;C:\ProgramData\chocolatey\bin"
 
-65: Start-Process "C:\Users\Arobi Sultana\Downloads\abcd.exe" -ArgumentList "/S /quiet /norestart" -Verb runas -Wait ( Install .exe in powershell )
-66: start msedge gmail.com
-67: start msedge "https://www.youtube.com/results?search_query=eluveitie+isara"
-68: start msedge --inprivate "https://www.youtube.com/watch?v=Hd1xjTQ8puk&autoplay=1"
+ Start-Process "C:\Users\Arobi Sultana\Downloads\abcd.exe" -ArgumentList "/S /quiet /norestart" -Verb runas -Wait ( Install .exe in powershell )
+ start msedge gmail.com
+ start msedge "https://www.youtube.com/results?search_query=eluveitie+isara"
+ start msedge --inprivate "https://www.youtube.com/watch?v=Hd1xjTQ8puk&autoplay=1"
+start msedge "https://tse1.mm.bing.net/th/id/OIP.1QN9rkUC3T3kmbnMfsnBIAHaE8?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3"
 
-69: @echo off
+ @echo off
     netsh wlan show profile name="BU-Students" key=clear | findstr /R /C:"Key Content"
     pause
 
-70:@echo off
+@echo off
 powershell -command "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; $bmp = New-Object Drawing.Bitmap ([System.Windows.Forms.SystemInformation]::VirtualScreen.Width), ([System.Windows.Forms.SystemInformation]::VirtualScreen.Height); $graphics = [Drawing.Graphics]::FromImage($bmp); $graphics.CopyFromScreen([System.Windows.Forms.SystemInformation]::VirtualScreen.Location, [System.Drawing.Point]::Empty, $bmp.Size); $bmp.Save('C:\\Users\\%USERNAME%\\Desktop\\full_screenshot.png'); $graphics.Dispose(); $bmp.Dispose()"
 echo Screenshot saved to Desktop as full_screenshot.png
 pause
@@ -211,6 +212,7 @@ New-NetFirewallRule -DisplayName "Allow Reverse Shell" -Direction Outbound -Prot
 Add-Content -Path "C:\Users\Public\log.txt" -Value "$(Get-Date): updater.ps1 triggered"
 netsh advfirewall firewall add rule name="Allow Reverse Shell" dir=out action=allow protocol=TCP remoteport=4444
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+
 
 
 
