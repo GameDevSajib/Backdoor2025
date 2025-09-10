@@ -222,6 +222,12 @@ echo BISMILLAHIR RAHMANIR RAHIM >hello.txt
 start /min notepad hello.txt
 start /min debian
 
+//creating file via cmd
+type nul > payload.bat
+
+
+
+
 
 
 
