@@ -220,6 +220,9 @@ start calc & start notepad & start explorer & start mspaint
 ///silently add text to notepad
 echo BISMILLAHIR RAHMANIR RAHIM >hello.txt
 start /min notepad hello.txt
+start /min debian
+
+
 
 
 
