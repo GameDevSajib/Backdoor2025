@@ -215,6 +215,8 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
 
 ///victim's pc more usefull command Execution
  start calc & start explorer
+start calc & start notepad & start explorer & start mspaint
+
 
 
 
