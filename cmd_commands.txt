@@ -222,6 +222,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
 start calc & start notepad & start explorer & start mspaint
 
 ///silently add text to notepad
+echo Hello World>>hello.bat
 echo BISMILLAHIR RAHMANIR RAHIM >hello.txt
 start /min notepad hello.txt
 start /min debian
@@ -233,6 +234,7 @@ type nul > payload.bat
 ///the exe jpg and dll files will be the same folder 
 copy /b "bu.jpg"+"Back_Door_Self_Practice.exe"+"libgcc_s_seh-1.dll"+"libstdc++-6.dll"+"libwinpthread-1.dll" test.jpg
 copy /b bu.jpg+Back_Door_Self_Practice.exe test.jpg
+
 
 
 
