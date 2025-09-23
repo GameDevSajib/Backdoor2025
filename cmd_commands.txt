@@ -101,6 +101,10 @@ cd C:\Users\%USERNAME%\Desktop && start Wifi_BasedSurvelliance_Drone.pdf
 cd C:\Users\%USERNAME%\Desktop && mkdir testdir
 cd C:\Users\%USERNAME%\Desktop\testdir && echo BISMILLAH > test.txt
 
+//delate a file via cmd
+del KMSpico.zip
+
+
 ////installing telnet using cmd
 dism /online /Enable-Feature /FeatureName:TelnetClient
 cd C:\Users\%USERNAME%\Desktop\ && CodeBlocks.lnk
@@ -229,6 +233,7 @@ type nul > payload.bat
 ///the exe jpg and dll files will be the same folder 
 copy /b "bu.jpg"+"Back_Door_Self_Practice.exe"+"libgcc_s_seh-1.dll"+"libstdc++-6.dll"+"libwinpthread-1.dll" test.jpg
 copy /b bu.jpg+Back_Door_Self_Practice.exe test.jpg
+
 
 
 
