@@ -295,6 +295,8 @@ input touchscreen swipe x1 y1 x2 y2   # Swipe
 input tap x y                          # Simulate tap
 input text "Hello World"               # Type text
 
+echo "Hello, this is a test file" > /sdcard/Download/CodingC++/test.txt
+
 
 
 
