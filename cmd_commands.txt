@@ -249,6 +249,65 @@ x86_64-w64-mingw32-g++ 18CSE048.cpp -o 18CSE048.exe -lws2_32 -static-libgcc -sta
 
 
 
+////for Android  commands:
+getprop                     # Show all system properties
+getprop ro.build.version.release   # Android version
+getprop ro.product.model          # Device model
+getprop ro.product.manufacturer   # Manufacturer
+getprop ro.serialno               # Serial number
+uname -a                          # Kernel version
+cat /proc/version                 # Kernel info
+
+
+dumpsys battery                   # Battery status
+dumpsys display                   # Display info
+dumpsys sensorservice              # Sensor info
+cat /sys/class/thermal/thermal_zone*/temp  # CPU temp
+
+ls /sdcard/                        # Main storage
+ls /sdcard/DCIM                     # Photos / Videos
+ls /data/local/tmp                  # Temp storage
+df -h                               # Disk usage
+du -sh /sdcard/*                    # Size of directories
+
+pm list packages                     # List installed apps
+pm list packages -s                  # List system apps
+pm list packages -3                  # List 3rd-party apps
+pm path com.android.chrome           # APK path
+pm install /sdcard/app.apk           # Install APK
+pm uninstall com.example.app         # Uninstall app
+
+ps                                   # List processes
+ps -A                                # All processes
+top                                  # Real-time CPU/memory usage
+cat /proc/meminfo                     # Memory info
+cat /proc/cpuinfo                     # CPU info
+
+ifconfig                             # IP addresses (may require root)
+ip addr                               # IP addresses
+netstat                               # Open connections (may be restricted)
+ping google.com                       # Ping test
+getprop dhcp.wlan0.ipaddress          # WiFi IP
+
+logcat -d                             # Dump logs
+input keyevent 26                     # Power button toggle
+input touchscreen swipe x1 y1 x2 y2   # Swipe
+input tap x y                          # Simulate tap
+input text "Hello World"               # Type text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
