@@ -296,10 +296,13 @@ input tap x y                          # Simulate tap
 input text "Hello World"               # Type text
 
 echo "Hello, this is a test file" > /sdcard/Download/CodingC++/test.txt
+echo "BISMILLAH" > /sdcard/Download/abcd/ancd.txt
+
 
 touch /sdcard/Download/CodingC++/test2.txt
 mkdir /sdcard/Download/NewFolder
 rmdir /sdcard/Download/NewFolder
+
 
 
 
