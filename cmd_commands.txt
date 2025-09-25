@@ -241,6 +241,16 @@ x86_64-w64-mingw32-g++ 18CSE048.cpp -o 18CSE048.exe -lws2_32 -static-libgcc -sta
 
 
 
+///Running python code in virtual environment
+# create a virtual environment
+python3 -m venv ~/venv_pdf
+source ~/venv_pdf/bin/activate
+pip install PyPDF2
+python pdf.py
+deactivate
+
+
+
 
 
 
@@ -302,6 +312,7 @@ echo "BISMILLAH" > /sdcard/Download/abcd/ancd.txt
 touch /sdcard/Download/CodingC++/test2.txt
 mkdir /sdcard/Download/NewFolder
 rmdir /sdcard/Download/NewFolder
+
 
 
 
