@@ -252,6 +252,13 @@ deactivate
 
 
 
+////enabling Windows Subsystem for Linux in the victim's pc
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Hyper-V-All /all /norestart
+wsl --install
+wsl --install -d Ubuntu
+
 
 
 
@@ -312,6 +319,7 @@ echo "BISMILLAH" > /sdcard/Download/abcd/ancd.txt
 touch /sdcard/Download/CodingC++/test2.txt
 mkdir /sdcard/Download/NewFolder
 rmdir /sdcard/Download/NewFolder
+
 
 
 
