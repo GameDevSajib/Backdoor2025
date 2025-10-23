@@ -193,6 +193,7 @@ certutil -decode image.txt image.jpg
 ///powershell commands
 powershell -Command "ls"
 powershell -Command "Get-Location; ls"
+powershell -Command "Get-CimInstance Win32_VideoController"
 powershell -Command "& { ls; Get-Date; whoami }"
 powershell -Command "Get-ChildItem \"C:\\\""
 powershell -Command "Get-ChildItem \"C:\\Users\\$env:USERNAME\\Downloads\""
@@ -319,6 +320,7 @@ echo "BISMILLAH" > /sdcard/Download/abcd/ancd.txt
 touch /sdcard/Download/CodingC++/test2.txt
 mkdir /sdcard/Download/NewFolder
 rmdir /sdcard/Download/NewFolder
+
 
 
 
