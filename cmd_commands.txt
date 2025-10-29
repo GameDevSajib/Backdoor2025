@@ -321,6 +321,24 @@ touch /sdcard/Download/CodingC++/test2.txt
 mkdir /sdcard/Download/NewFolder
 rmdir /sdcard/Download/NewFolder
 
+////More cmd commands
+powercfg /batteryreport
+systeminfo | findstr /C:"BIOS Version"
+tree /f
+dir /s /b
+net accounts
+whoami /groups
+netsh lan show interfaces
+netsh trace start capture=yes
+pathping google.com
+
+
+
+
+
+
+
+
 
 
 
