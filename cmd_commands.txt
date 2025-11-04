@@ -337,6 +337,8 @@ start "" "C:\Users\sajib\OneDrive\Pictures\Screenshots\abc.png"
 ///open all images one by one using cmd 
 for %f in ("C:\Users\sajib\OneDrive\Pictures\Screenshots\*.png") do start "" "%f"
 for %f in ("C:\Users\sajib\OneDrive\Pictures\ict\*.jpg" "C:\Users\sajib\OneDrive\Pictures\ict\*.png") do start "" "%f"
+start "" "C:\Users\sajib\OneDrive\Desktop\Youtube_Videos_on_jobs\c.mp4"
+
 
 
 
