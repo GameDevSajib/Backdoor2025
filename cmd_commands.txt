@@ -334,6 +334,10 @@ pathping google.com
 
 start "" "C:\Users\sajib\OneDrive\Pictures\Screenshots\abc.png"
 
+///open all images one by one using cmd 
+for %f in ("C:\Users\sajib\OneDrive\Pictures\Screenshots\*.png") do start "" "%f"
+
+
 
 
 
