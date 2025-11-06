@@ -339,6 +339,9 @@ for %f in ("C:\Users\sajib\OneDrive\Pictures\Screenshots\*.png") do start "" "%f
 for %f in ("C:\Users\sajib\OneDrive\Pictures\ict\*.jpg" "C:\Users\sajib\OneDrive\Pictures\ict\*.png") do start "" "%f"
 start "" "C:\Users\sajib\OneDrive\Desktop\Youtube_Videos_on_jobs\c.mp4"
 
+//checking  either CPU is in overclocking mode or not 
+powershell -Command "Get-CimInstance Win32_Processor | Select-Object -Property Name, CurrentClockSpeed, MaxClockSpeed"
+
 
 
 
