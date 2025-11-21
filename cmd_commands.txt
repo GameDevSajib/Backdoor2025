@@ -1,3 +1,13 @@
+codeblocks linkers flags:
+ws2_32
+winmm
+vfw32
+gdi32
+
+
+
+
+
 1. cd
 
 2. ipconfig
@@ -341,6 +351,7 @@ start "" "C:\Users\sajib\OneDrive\Desktop\Youtube_Videos_on_jobs\c.mp4"
 
 //checking  either CPU is in overclocking mode or not 
 powershell -Command "Get-CimInstance Win32_Processor | Select-Object -Property Name, CurrentClockSpeed, MaxClockSpeed"
+
 
 
 
