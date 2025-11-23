@@ -354,6 +354,11 @@ powershell -Command "Get-CimInstance Win32_Processor | Select-Object -Property N
 
 
 
+///cross compilation in Linux for generating an exe file 
+x86_64-w64-mingw32-g++ Defence.cpp -o Defence.exe -lws2_32 -lwinmm -lvfw32 -lgdi32
+
+
+
 
 
 
