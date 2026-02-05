@@ -360,6 +360,20 @@ sudo apt install mingw-w64
 x86_64-w64-mingw32-g++ Defence.cpp -o Defence.exe -lws2_32 -lwinmm -lvfw32 -lgdi32
 
 
+///phising attack
+1.HiddenEye:
+sudo apt install python3 python3-pip python3-venv 
+python3 -m venv ctf-env
+source ctf-env/bin/activate  
+pip3 install -r requirements.txt 
+pip install requests pgrep pyngrok PyYAML future urllib3 certifi chardet idna
+pip install colorama bs4 html5lib lxml  
+pip install setuptools wheel 
+pip install --upgrade pip setuptools wheel 
+
+
+
+
 
 
 
