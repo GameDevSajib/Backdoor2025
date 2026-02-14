@@ -372,6 +372,8 @@ pip install setuptools wheel
 pip install --upgrade pip setuptools wheel 
 
 
+/////Linux Commands
+proxychains4 nslookup bu.ac.bd
 
 
 
