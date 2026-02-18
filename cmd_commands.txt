@@ -367,6 +367,7 @@ nslookup myip.opendns.com resolver1.opendns.com
 powershell -command "(Invoke-WebRequest -Uri 'https://ipinfo.io/json').Content"
 
 ///nmap installaion via cmd into victim computer
+curl -O https://nmap.org/dist/nmap-7.95-setup.exe
 
 
 
@@ -388,6 +389,7 @@ pip install --upgrade pip setuptools wheel
 
 /////Linux Commands
 proxychains4 nslookup bu.ac.bd
+
 
 
 
