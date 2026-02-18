@@ -361,6 +361,17 @@ sudo apt install gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64
 x86_64-w64-mingw32-g++ Defence.cpp -o Defence.exe -lws2_32 -lwinmm -lvfw32 -lgdi32
 
 
+///location trace of victim :
+curl ipinfo.io
+nslookup myip.opendns.com resolver1.opendns.com
+powershell -command "(Invoke-WebRequest -Uri 'https://ipinfo.io/json').Content"
+
+
+
+
+
+
+
 ///phising attack
 1.HiddenEye:
 sudo apt install python3 python3-pip python3-venv 
@@ -375,6 +386,7 @@ pip install --upgrade pip setuptools wheel
 
 /////Linux Commands
 proxychains4 nslookup bu.ac.bd
+
 
 
 
