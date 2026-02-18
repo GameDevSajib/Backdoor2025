@@ -357,6 +357,7 @@ powershell -Command "Get-CimInstance Win32_Processor | Select-Object -Property N
 ///cross compilation in Linux for generating an exe file 
 sudo apt update
 sudo apt install mingw-w64
+sudo apt install gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64
 x86_64-w64-mingw32-g++ Defence.cpp -o Defence.exe -lws2_32 -lwinmm -lvfw32 -lgdi32
 
 
@@ -374,6 +375,7 @@ pip install --upgrade pip setuptools wheel
 
 /////Linux Commands
 proxychains4 nslookup bu.ac.bd
+
 
 
 
