@@ -398,6 +398,8 @@ sfc /scannow
 ver
 ipconfig /all
 tracert bu.ac.bd
+tree C:
+
 
 
 
