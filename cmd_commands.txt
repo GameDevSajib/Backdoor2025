@@ -391,6 +391,11 @@ pip install --upgrade pip setuptools wheel
 proxychains4 nslookup bu.ac.bd
 
 
+///cmd 
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "ls"
+
+
+
 
 
 
