@@ -395,6 +395,8 @@ proxychains4 nslookup bu.ac.bd
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "ls"
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-Process"
 sfc /scannow
+ver
+
 
 
 
