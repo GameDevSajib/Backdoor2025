@@ -399,6 +399,8 @@ ver
 ipconfig /all
 tracert bu.ac.bd
 tree C:
+robocopy “D:\Digital Citizen” D:\backup /E
+
 
 
 
