@@ -397,6 +397,8 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-Process"
 sfc /scannow
 ver
 ipconfig /all
+tracert bu.ac.bd
+
 
 
 
