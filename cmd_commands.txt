@@ -401,6 +401,10 @@ tracert bu.ac.bd
 tree C:
 robocopy “D:\Digital Citizen” D:\backup /E
 driverquery
+wmic os get installdate
+wmic path Win32_OperatingSystem get LastBootUpTime
+wmic path Win32_USBControllerDevice get Dependent
+
 
 
 
