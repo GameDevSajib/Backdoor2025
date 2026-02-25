@@ -404,6 +404,10 @@ driverquery
 wmic os get installdate
 wmic path Win32_OperatingSystem get LastBootUpTime
 wmic path Win32_USBControllerDevice get Dependent
+wmic product get name,version
+del /s /q %temp%*
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+wmic /node:RemotePCName computersystem get username
 
 
 
